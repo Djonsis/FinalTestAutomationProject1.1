@@ -1,0 +1,6 @@
+[
+  "TC-RT-001.py::TestAuthentication::test_check_authentication_form_display",
+  "TC-RT-001.py::TestAuthentication::test_check_left_page",
+  "TC-RT-001.py::TestAuthentication::test_phone_form_main",
+  "TC-RT-001.py::test_check_authentication_form_display"
+]
