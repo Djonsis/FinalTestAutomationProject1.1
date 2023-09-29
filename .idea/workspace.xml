@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f3c04c33-304a-4b63-9f31-444063a1e265" name="Changes" comment="Добавления после внесения всех файлов в игнор">
-      <change afterPath="$PROJECT_DIR$/venv/Auth_Tests/Test_TC-RT-002.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Auth_Tests/Test_TC-RT-006.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Auth_Tests/Test_TC-RT-007.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Auth_Tests/Test_TC-RT-010.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Auth_Tests/.pytest_cache/v/cache/lastfailed" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Auth_Tests/.pytest_cache/v/cache/lastfailed" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Auth_Tests/.pytest_cache/v/cache/nodeids" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Auth_Tests/.pytest_cache/v/cache/nodeids" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Auth_Tests/TC-RT-002.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Auth_Tests/Test_TC-RT-001.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Auth_Tests/Test_TC-RT-001.py" afterDir="false" />
-    </list>
+    <list default="true" id="f3c04c33-304a-4b63-9f31-444063a1e265" name="Changes" comment="Добавление тестов" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -223,7 +213,14 @@
       <option name="project" value="LOCAL" />
       <updated>1695322603421</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Добавление тестов">
+      <created>1696013273715</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1696013273715</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -251,6 +248,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Добавления после внесения всех файлов в игнор" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавления после внесения всех файлов в игнор" />
+    <MESSAGE value="Добавление тестов" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавление тестов" />
   </component>
 </project>
