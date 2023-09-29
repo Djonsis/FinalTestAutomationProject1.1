@@ -8,16 +8,22 @@ from selenium.common.exceptions import NoSuchElementException
 
 
 # Определение класса для тестов
-class TestAuthentication:
-    def setup_method(self):
-        self.driver = my_driver
+class TestAuthentication():
+
+    @pytest.fixture(scope="function")
+    def my_fixture(self):
+        driver = my_driver
+        yield driver
+        driver.quit()
 
     # Тест 1: Проверка форм и страницы
-    def test_check_authentication_form_display(self):
+    def test_check_authentication_form_display(self, my_fixture):
+        my_driver = my_fixture
+
         try:
             # Шаг 1: Открыть страницу авторизации
-            my_driver.get("https://b2c.passport.rt.ru/auth/realms/b2c/protocol/openid-connect/auth?client_id=account_b2c&redirect_uri=https://b2c.passport.rt.ru/account_b2c/login&response_type=code&scope=openid&state=e6d44528-2e17-413d-92b3-999f0b96c890&theme&auth_type")
-            wait = WebDriverWait(my_driver, 20)
+            my_driver.get("https://b2c.passport.rt.ru")
+            wait = WebDriverWait(my_driver, 10)
             wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, "#body")))
 
             # Шаг 2: Проверить наличие формы "Авторизация"
@@ -44,7 +50,9 @@ class TestAuthentication:
             print(f"Тест провален: {str(e)}")
 
     # Тест 2: Проверить наличие вспомогательной информации в левой части
-    def test_check_left_page(self):
+    def test_check_left_page(self, my_fixture):
+        my_driver = my_fixture
+
         try:
             # Попытка найти элемент app-footer > div.rt-footer-left внутри page-left
             page_left = my_driver.find_element(By.ID, "page-left")
@@ -55,7 +63,8 @@ class TestAuthentication:
             print("Вспомогательная информация не находится в левой части страницы")
 
     # Тест 3: Проверить, что по умолчанию выбрана форма авторизации по телефону
-    def test_phone_form_main(self):
+    def test_phone_form_main(self, my_fixture):
+        my_driver = my_fixture
         try:
             auth_form_phone = my_driver.find_element(By.ID, "t-btn-tab-phone")
             element_classes = auth_form_phone.get_attribute("class")
@@ -64,6 +73,3 @@ class TestAuthentication:
             print("Тест успешно завершен.")
         except Exception as e:
             print(f"Тест провален: {str(e)}")
-
-    def teardown_method(self):
-        self.driver.quit()

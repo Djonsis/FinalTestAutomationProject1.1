@@ -1,3 +1,4 @@
 {
-  "TC-RT-001.py::TestAuthentication::test_check_left_page": true
+  "TC-RT-001.py::TestAuthentication::test_check_left_page": true,
+  "Test_TC-RT-001.py::TestAuthentication::test_check_left_page": true
 }
